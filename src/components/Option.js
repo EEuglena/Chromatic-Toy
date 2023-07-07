@@ -7,9 +7,7 @@ const Option = ({ id, color, onClick }) => {
 			className={styles.container}
 			style={{ backgroundColor: color }}
 			onClick={onClick}
-		>
-			<p>{color}</p>
-		</button>
+		></button>
 	);
 };
 

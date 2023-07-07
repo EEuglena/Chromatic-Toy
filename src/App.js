@@ -26,7 +26,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<ScoreProvider>
-				<Router>
+				<Router basename="/Chromatic-Toy">
 					<Routes>
 						<Route path="/problem" element={<Problem />}></Route>
 						<Route path="/result" element={<Result />}></Route>

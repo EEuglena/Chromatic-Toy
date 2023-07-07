@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useScore } from "../App";
 import styles from "./Result.module.css";
+import html2canvas from "html2canvas";
 
 const Result = () => {
 	const { score, setScore, setIndex } = useScore();
@@ -11,11 +12,25 @@ const Result = () => {
 			<h2>당신의 색감 점수는?</h2>
 			<h1>{score * 10}점입니다!</h1>
 			<p>
-				대법원장과 대법관이 아닌 법관은 대법관회의의 동의를 얻어
-				대법원장이 임명한다. 국민경제자문회의의 조직·직무범위 기타
-				필요한 사항은 법률로 정한다. 재의의 요구가 있을 때에는 국회는
-				재의에 붙이고, 재적의원과반수의 출석과 출석의원 3분의 2 이상의
-				찬성으로 전과 같은 의결을 하면 그 법률안은 법률로서 확정된다.
+				{score > 8 ? (
+					"혹시, 나 전생에 피카소였나?!"
+				) : score > 6 ? (
+					<>
+						오우~
+						<br />색 좀 볼 줄<br />
+						아는 친구인가~?
+					</>
+				) : score > 4 ? (
+					"삐빅, 정상입니다."
+				) : score > 2 ? (
+					<>
+						근데 넌 모르잖아,
+						<br />
+						알록달록한 세상.
+					</>
+				) : (
+					"나... 색맹은 아니겠지?"
+				)}
 			</p>
 			<button
 				id={styles.first}
@@ -27,8 +42,32 @@ const Result = () => {
 			>
 				다시 해보기
 			</button>
-			<button id={styles.second}>링크 공유하기</button>
-			<button id={styles.third}>결과 캡처하기</button>
+			<button
+				id={styles.second}
+				onClick={() => {
+					window.blur();
+					const text = "https://eeuglena.github.io/Chromatic-Toy";
+					navigator.clipboard.writeText(text);
+				}}
+			>
+				테스트 공유하기
+			</button>
+			<button
+				id={styles.third}
+				onClick={() => {
+					window.blur();
+					html2canvas(document.querySelector("div div")).then(
+						(canvas) => {
+							const el = document.createElement("a");
+							el.href = canvas.toDataURL("image/jpeg");
+							el.download = "Screenshot.jpg";
+							el.click();
+						}
+					);
+				}}
+			>
+				결과 캡처하기
+			</button>
 		</div>
 	);
 };

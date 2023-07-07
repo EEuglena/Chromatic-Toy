@@ -5,30 +5,19 @@
 	height: 100%;
 
 	cursor: pointer;
-	outline: 2px solid black;
 	border: none;
 }
 
-.container p {
-	width: 100%;
-	height: fit-content;
-	margin: 0;
-	padding: 5px 0;
-
-	outline: 2px solid black;
-
-	text-align: center;
-	font-size: 1rem;
-	font-family: "SUITE-ExtraBold";
-	background-color: white;
-}
-
-.container:focus {
+.container:active {
+	z-index: 1;
 	border: none;
 	outline: 2px solid black;
 }
 
-.container:hover p,
-.container:focus p {
-	background-color: rgb(35, 149, 255);
+@media (min-width: 481px) {
+	.container:hover {
+		z-index: 1;
+		border: none;
+		outline: 2px solid black;
+	}
 }
