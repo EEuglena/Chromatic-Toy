@@ -1,0 +1,49 @@
+.container {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	background-color: white;
+}
+
+.container h1 {
+	position: absolute;
+	top: 25%;
+
+	color: rgb(109, 185, 255);
+	font-family: "yg-jalnan";
+}
+
+.container h2 {
+	position: absolute;
+	top: 40%;
+
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: "SUITE-Regular";
+}
+
+.container button {
+	width: 40%;
+	height: 6%;
+	position: absolute;
+	bottom: 35%;
+
+	border: none;
+	border-radius: 5rem;
+	background-color: rgb(109, 185, 255);
+
+	color: white;
+	font-size: 1rem;
+	font-family: "SUITE-ExtraBold";
+}
+
+.container button:hover,
+button:focus {
+	outline: none;
+	background-color: rgb(76, 153, 224);
+}

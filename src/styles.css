@@ -1,0 +1,47 @@
+@font-face {
+	font-family: "yg-jalnan";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SUITE-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+		format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SUITE-ExtraBold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-ExtraBold.woff2")
+		format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: rgb(212, 236, 255);
+	margin: 0;
+}
+
+.App {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+@media (min-width: 376px) {
+	.App {
+		top: calc(50vh - 333.5px);
+		left: calc(50vw - 187.5px);
+		width: 375px;
+		height: 667px;
+	}
+}
