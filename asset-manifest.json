@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Chromatic-Toy/static/css/main.0a725d51.css",
+    "main.css": "/Chromatic-Toy/static/css/main.0e916522.css",
     "main.js": "/Chromatic-Toy/static/js/main.48daa120.js",
     "index.html": "/Chromatic-Toy/index.html",
-    "main.0a725d51.css.map": "/Chromatic-Toy/static/css/main.0a725d51.css.map",
+    "main.0e916522.css.map": "/Chromatic-Toy/static/css/main.0e916522.css.map",
     "main.48daa120.js.map": "/Chromatic-Toy/static/js/main.48daa120.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a725d51.css",
+    "static/css/main.0e916522.css",
     "static/js/main.48daa120.js"
   ]
 }
